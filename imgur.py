@@ -1,13 +1,3 @@
-"""
-CLimgur is a command line imgur upload client.
-add CLimgur to your path and then upload files like this:
-
-    single file: imgur -upload "path/to/file.png"
-    album upload: imgur -album "path/to/folder"
-
-once the file is uploaded a link will be in the command line.
-
-"""
 import argparse
 import os
 from credentials import get, set
@@ -25,7 +15,7 @@ def main():
     options.add_argument("-a", "--album", help="Upload all images in directory to imgur as an album")
     args = parser.parse_args()
 
-    # Attempt to get credentials from file. If unavailable set credentials from user
+    # Attempt to get credentials from file. If unavailable set credentials from input
     login = get.get_creds()
     cred_dir = os.path.dirname(os.path.abspath(__file__)) + "\credentials\credentials.cred"
     if not login:
