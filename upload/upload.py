@@ -4,13 +4,6 @@ from requests import exceptions
 from imgurpython import ImgurClient
 from imgurpython.helpers.error import ImgurClientError
 
-"""
-    Need to add a way to store client id and secret to separate (encrypted?) file.
-
-    MUST
-    initialize the client in a class or it runs auto
-"""
-
 
 class Client():
 
